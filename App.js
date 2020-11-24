@@ -1,21 +1,17 @@
-import React from "react";
-import { View, Text } from "react-native";
 
-const ViewBoxesWithColorAndText = () => {
+import React, { Component } from 'react';
+import { TextInput } from 'react-native';
+
+const UselessTextInput = () => {
+  const [value, onChangeText] = React.useState('Useless Placeholder');
+
   return (
-    <View
-      // eslint-disable-next-line react-native/no-inline-styles
-      style={{
-        flexDirection: "row",
-        height: 100,
-        padding: 20
-      }}
-    >
-      <View style={{ backgroundColor: "blue", flex: 1 }} />
-      <View style={{ backgroundColor: "red", flex: 0.8 }} />
-      <Text>Good !</Text>
-    </View>
+    <TextInput
+      style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+      onChangeText={text => onChangeText(text)}
+      value={value}
+    />
   );
-};
+}
 
-export default ViewBoxesWithColorAndText;
+export default UselessTextInput;
