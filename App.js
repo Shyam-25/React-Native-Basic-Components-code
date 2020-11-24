@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, SafeAreaView, ScrollView } from 'react-native';
-import Constants from 'expo-constants';
 
 const App = () => {
   return (
